@@ -205,7 +205,7 @@ git add .
 git commit -m "Initial commit: Gaming Metrics Dashboard"
 
 # Create GitHub repository and push
-git remote add origin https://github.com/YOUR_USERNAME/gaming-metrics-dashboard.git
+git remote add origin https://github.com/reyisjones/GamingMetrics.git
 git branch -M main
 git push -u origin main
 ```
@@ -300,9 +300,9 @@ Uncomment Preact aliases in `vite.config.js` for:
 ## 🔗 Important Links
 
 - **Live Demo**: http://localhost:5173 (local) or GitHub Pages (after deployment)
-- **Repository**: https://github.com/YOUR_USERNAME/gaming-metrics-dashboard
-- **Releases**: https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases
-- **Issues**: https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/issues
+- **Repository**: https://github.com/reyisjones/GamingMetrics
+- **Releases**: https://github.com/reyisjones/GamingMetrics/releases
+- **Issues**: https://github.com/reyisjones/GamingMetrics/issues
 
 ## ✅ Completed Checklist
 

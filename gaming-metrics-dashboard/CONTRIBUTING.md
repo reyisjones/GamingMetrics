@@ -56,7 +56,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/gaming-metrics-dashboard.git
+git clone https://github.com/reyisjones/GamingMetrics.git
 cd gaming-metrics-dashboard
 
 # Install dependencies

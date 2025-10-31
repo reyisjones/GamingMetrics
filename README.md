@@ -1,6 +1,6 @@
 # Gaming Metrics Dashboard
 
-[![CI/CD Pipeline](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/actions)
+[![CI/CD Pipeline](https://github.com/reyisjones/GamingMetrics/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/reyisjones/GamingMetrics/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
 
@@ -98,8 +98,8 @@ gaming-metrics-dashboard/
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/YOUR_USERNAME/gaming-metrics-dashboard.git
-cd gaming-metrics-dashboard
+git clone https://github.com/reyisjones/GamingMetrics.git
+cd GamingMetrics/gaming-metrics-dashboard
 ```
 
 2. **Navigate to the project directory**:
@@ -312,7 +312,7 @@ git push origin v1.0.0
 
 ### 3. GitHub Pages Deployment (`pages.yml`)
 Auto-deploys web app on push to `main`:
-- 🌐 Deploys to `https://YOUR_USERNAME.github.io/gaming-metrics-dashboard/`
+- 🌐 Deploys to `https://reyisjones.github.io/GamingMetrics/`
 - 🔄 Updates automatically on every commit to main
 
 **Setup**: Enable GitHub Pages in repository settings → Source: GitHub Actions
@@ -748,8 +748,8 @@ This project is licensed under the MIT License - see the [LICENSE](./gaming-metr
 ## 📞 Support
 
 - 📧 Email: your-email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/discussions)
+- 🐛 Issues: [GitHub Issues](https://github.com/reyisjones/GamingMetrics/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/reyisjones/GamingMetrics/discussions)
 
 ## 🗺️ Roadmap
 

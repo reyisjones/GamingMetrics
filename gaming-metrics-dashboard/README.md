@@ -1,6 +1,6 @@
 # Gaming Metrics Dashboard
 
-[![CI/CD Pipeline](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/actions)
+[![CI/CD Pipeline](https://github.com/reyisjones/GamingMetrics/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/reyisjones/GamingMetrics/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
 
@@ -86,7 +86,7 @@ gaming-metrics-dashboard/
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/YOUR_USERNAME/gaming-metrics-dashboard.git
+git clone https://github.com/reyisjones/GamingMetrics.git
 cd gaming-metrics-dashboard
 ```
 
@@ -255,7 +255,7 @@ git push origin v1.0.0
 ### 3. GitHub Pages Deployment (`.github/workflows/pages.yml`)
 
 Deploys web app to GitHub Pages on main branch updates:
-- 🌐 Automatically deploys to `https://YOUR_USERNAME.github.io/gaming-metrics-dashboard/`
+- 🌐 Automatically deploys to `https://reyisjones.github.io/GamingMetrics/`
 
 **Setup**:
 1. Go to repository Settings → Pages
@@ -330,14 +330,14 @@ ws.onmessage = (event) => {
 
 ### Windows
 
-1. Download the `.msi` installer from the [Releases](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases) page
+1. Download the `.msi` installer from the [Releases](https://github.com/reyisjones/GamingMetrics/releases) page
 2. Run the installer
 3. Follow the installation wizard
 4. Launch from Start Menu or Desktop shortcut
 
 ### macOS
 
-1. Download the `.dmg` file from the [Releases](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases) page
+1. Download the `.dmg` file from the [Releases](https://github.com/reyisjones/GamingMetrics/releases) page
 2. Open the `.dmg` file
 3. Drag the app to Applications folder
 4. Launch from Applications or Launchpad
@@ -439,8 +439,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📧 Email: your-email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/discussions)
+- 🐛 Issues: [GitHub Issues](https://github.com/reyisjones/GamingMetrics/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/reyisjones/GamingMetrics/discussions)
 
 ## 🗺️ Roadmap
 

@@ -9,7 +9,7 @@ This guide is for users who want to install and use the Gaming Metrics Dashboard
 #### Option 1: MSI Installer (Recommended)
 
 1. **Download the installer**
-   - Go to the [Releases](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases) page
+   - Go to the [Releases](https://github.com/reyisjones/GamingMetrics/releases) page
    - Download the latest `.msi` file (e.g., `gaming-metrics-dashboard_1.0.0_x64_en-US.msi`)
 
 2. **Run the installer**
@@ -33,7 +33,7 @@ This guide is for users who want to install and use the Gaming Metrics Dashboard
 #### Installation Steps
 
 1. **Download the DMG**
-   - Go to the [Releases](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases) page
+   - Go to the [Releases](https://github.com/reyisjones/GamingMetrics/releases) page
    - Download the latest `.dmg` file (e.g., `gaming-metrics-dashboard_1.0.0_x64.dmg`)
 
 2. **Install the app**
@@ -55,7 +55,7 @@ This guide is for users who want to install and use the Gaming Metrics Dashboard
 
 1. **Download the package**
    ```bash
-   wget https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases/download/v1.0.0/gaming-metrics-dashboard_1.0.0_amd64.deb
+   wget https://github.com/reyisjones/GamingMetrics/releases/download/v1.0.0/gaming-metrics-dashboard_1.0.0_amd64.deb
    ```
 
 2. **Install**
@@ -78,7 +78,7 @@ This guide is for users who want to install and use the Gaming Metrics Dashboard
 
 1. **Download AppImage**
    ```bash
-   wget https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases/download/v1.0.0/gaming-metrics-dashboard_1.0.0_amd64.AppImage
+   wget https://github.com/reyisjones/GamingMetrics/releases/download/v1.0.0/gaming-metrics-dashboard_1.0.0_amd64.AppImage
    ```
 
 2. **Make it executable**
@@ -95,7 +95,7 @@ This guide is for users who want to install and use the Gaming Metrics Dashboard
 
 1. **Download RPM**
    ```bash
-   wget https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/releases/download/v1.0.0/gaming-metrics-dashboard-1.0.0.x86_64.rpm
+   wget https://github.com/reyisjones/GamingMetrics/releases/download/v1.0.0/gaming-metrics-dashboard-1.0.0.x86_64.rpm
    ```
 
 2. **Install**
@@ -109,7 +109,7 @@ This guide is for users who want to install and use the Gaming Metrics Dashboard
 
 Simply open your browser and go to:
 ```
-https://YOUR_USERNAME.github.io/gaming-metrics-dashboard/
+https://reyisjones.github.io/GamingMetrics/
 ```
 
 No installation required! Works on any device with a modern web browser.
@@ -291,8 +291,8 @@ Simply delete the `.AppImage` file.
 ### Getting Help
 
 - 📧 Email: support@example.com
-- 🐛 Report bugs: [GitHub Issues](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/issues)
-- 💬 Community: [Discussions](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/discussions)
+- 🐛 Report bugs: [GitHub Issues](https://github.com/reyisjones/GamingMetrics/issues)
+- 💬 Community: [Discussions](https://github.com/reyisjones/GamingMetrics/discussions)
 - 📖 Documentation: [README](README.md)
 
 ### FAQ

@@ -7,7 +7,7 @@ Get started with Gaming Metrics Dashboard in 5 minutes!
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gaming-metrics-dashboard.git
+git clone https://github.com/reyisjones/GamingMetrics.git
 cd gaming-metrics-dashboard
 npm install
 ```
@@ -61,7 +61,7 @@ Your API should return:
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gaming-metrics-dashboard.git
+git clone https://github.com/reyisjones/GamingMetrics.git
 cd gaming-metrics-dashboard
 npm install
 ```
@@ -176,7 +176,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 - Read the full [README.md](README.md)
 - Check out [CONTRIBUTING.md](CONTRIBUTING.md) to contribute
-- Browse [GitHub Issues](https://github.com/YOUR_USERNAME/gaming-metrics-dashboard/issues) for known issues
+- Browse [GitHub Issues](https://github.com/reyisjones/GamingMetrics/issues) for known issues
 
 ## 🎮 Enjoy!
 
