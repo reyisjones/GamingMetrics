@@ -1,0 +1,7 @@
+{
+  "activeApi": "local",
+  "apis": {
+    "local": "http://localhost:8080/api/metrics",
+    "prod": "https://api.mygamingmetrics.com/v1/data"
+  }
+}
