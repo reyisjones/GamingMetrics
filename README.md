@@ -129,43 +129,6 @@ GamingMetrics/
 ├── README.md                   # This file
 └── LICENSE                     # MIT License
 ```
-│       ├── release.yml         # Desktop app builds
-│       └── pages.yml           # GitHub Pages deployment
-├── src/
-│   ├── api/
-│   │   └── config.json         # Java backend endpoint configuration
-│   ├── components/
-│   │   ├── GameCard.jsx        # Individual game metric card
-│   │   ├── MetricsChart.jsx    # Reusable chart component
-│   │   └── Header.jsx          # App header with live indicator
-│   ├── pages/
-│   │   └── Dashboard.jsx       # Main dashboard page
-│   ├── data/
-│   │   └── sampleGames.json    # Sample/fallback data
-│   ├── test/
-│   │   ├── setup.js            # Test configuration
-│   │   ├── Header.test.jsx
-│   │   ├── GameCard.test.jsx
-│   │   ├── MetricsChart.test.jsx
-│   │   └── Dashboard.test.jsx
-│   ├── App.jsx                 # Root component
-│   ├── main.jsx                # App entry point
-│   └── theme.js                # MUI theme configuration
-├── src-tauri/
-│   ├── src/
-│   │   └── main.rs             # Tauri main process
-│   ├── icons/                  # App icons
-│   ├── Cargo.toml              # Rust dependencies
-│   └── tauri.conf.json         # Tauri configuration
-├── package.json
-├── vite.config.js              # Vite configuration
-├── vitest.config.js            # Vitest configuration
-├── README.md
-├── QUICKSTART.md               # 5-minute setup guide
-├── INSTALLATION.md             # End-user installation guide
-├── CONTRIBUTING.md             # Developer contribution guide
-└── CHANGELOG.md                # Version history
-```
 
 ## 🚀 Quick Start
 
