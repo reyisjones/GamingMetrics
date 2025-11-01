@@ -3,23 +3,36 @@
 [![CI/CD Pipeline](https://github.com/reyisjones/GamingMetrics/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/reyisjones/GamingMetrics/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
+[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen)](https://spring.io/projects/spring-boot)
 
-A fast, responsive **Gaming Performance Dashboard** built with **React + Material UI (MUI)** and optimized for performance with **Vite**. Monitor real-time gaming metrics (FPS, CPU/GPU usage, latency, temperature) from your **Java backend**. Available as both a **web application** and **cross-platform desktop app** (Windows, macOS, Linux) via **Tauri**.
+A complete **full-stack Gaming Performance Dashboard** with a **React + Material UI (MUI)** frontend and **Java Spring Boot** backend. Monitor real-time gaming metrics (FPS, CPU/GPU usage, latency, temperature) with advanced analytics, performance calculations, and live streaming via Server-Sent Events. Available as both a **web application** and **cross-platform desktop app** (Windows, macOS, Linux) via **Tauri**.
 
 ## 🚀 Features
 
+### Frontend
 - 🎮 **Real-time Gaming Metrics Display**: FPS, CPU/GPU Usage, Latency, Temperature
 - 📊 **Interactive Charts**: Visualize performance metrics with Recharts
 - 🌙 **Dark Theme**: Modern gaming-themed UI with Material-UI
-- 🔌 **Java Backend Integration**: RESTful API connection with configurable endpoints
-- 💾 **Fallback Data**: Uses sample data when backend is unavailable
-- ⚡ **Live Updates**: Polls Java backend every 30 seconds for fresh metrics
+-  **Fallback Data**: Uses sample data when backend is unavailable
+- ⚡ **Live Updates**: Auto-refresh every 30 seconds
 - 📱 **Responsive Design**: Works on desktop and mobile devices
 - 🚀 **Performance Optimized**: Code splitting, lazy loading support
 - 🪶 **Preact Ready**: Optional lightweight bundle (3KB vs 40KB)
 - 💻 **Desktop App**: Cross-platform desktop application via Tauri
-- ✅ **Fully Tested**: Comprehensive unit tests with Vitest (25/25 passing)
-- 🔄 **CI/CD Ready**: Automated testing, building, and deployment
+- ✅ **Fully Tested**: 25 unit tests (all passing)
+
+### Backend
+- ☕ **Java Spring Boot 3.2.0**: Enterprise-grade REST API
+- 🔌 **RESTful Endpoints**: `/api/metrics`, `/analyze`, `/live`, `/test`
+- 📈 **Performance Calculations**: Weighted scoring algorithm
+- 🧮 **Stability Index**: CPU/GPU load balance measurement
+- 📊 **Analytics Service**: Variance analysis and recommendations
+- 🔴 **Real-time Streaming**: Server-Sent Events (SSE) every 3 seconds
+- ⏰ **Scheduled Monitoring**: Automated metrics aggregation (10s intervals)
+- 🎯 **Anomaly Detection**: High temp, low FPS, latency spikes
+- 🧪 **Comprehensive Testing**: 37+ unit and integration tests
+- 🔄 **CI/CD Ready**: Automated testing and deployment
 
 ## 📦 Tech Stack
 
@@ -34,20 +47,88 @@ A fast, responsive **Gaming Performance Dashboard** built with **React + Materia
 - **Emotion** - CSS-in-JS styling
 
 ### Backend (Java Integration)
-- **Spring Boot** (recommended) - RESTful API server
-- **Spring Web** - HTTP endpoints
+- **Spring Boot 3.2.0** - Enterprise Java framework
+- **Java 17+** - Modern Java runtime
+- **Maven** - Dependency management and build tool
+- **Spring Web** - REST API endpoints
+- **Spring Actuator** - Health monitoring
+- **Spring Cache** - Caching support
+- **Spring WebSocket** - SSE support for real-time streaming
+- **Lombok** - Reduces boilerplate code
+- **JUnit 5** - Comprehensive testing framework (37+ tests)
 - **Jackson** - JSON serialization
-- **WebSocket** (optional) - Real-time updates
-- Connects via configurable REST endpoints
-- Expected response format: JSON with game metrics
+- See [Backend README](backend/README.md) for full documentation
 
 ## 🏗️ Project Structure
 
 ```
-gaming-metrics-dashboard/
+GamingMetrics/
 ├── .github/
 │   └── workflows/
-│       ├── ci.yml              # CI/CD pipeline
+│       ├── ci.yml              # CI/CD pipeline for frontend
+│       ├── release.yml         # Desktop app builds (Tauri)
+│       └── pages.yml           # GitHub Pages deployment
+├── backend/                    # ☕ Java Spring Boot Backend
+│   ├── src/
+│   │   ├── main/java/com/gameperf/api/
+│   │   │   ├── GamingMetricsApplication.java    # Main app
+│   │   │   ├── GameMetricsController.java       # REST endpoints
+│   │   │   ├── GameMetricsService.java          # Business logic
+│   │   │   ├── GameAnalyticsService.java        # Analytics
+│   │   │   ├── GameSessionScheduler.java        # Scheduled tasks
+│   │   │   └── model/
+│   │   │       └── GameMetric.java              # Data model
+│   │   ├── main/resources/
+│   │   │   └── application.properties           # Spring config
+│   │   └── test/java/com/gameperf/api/
+│   │       ├── GameMetricsServiceTest.java      # 9 tests
+│   │       ├── GameAnalyticsServiceTest.java    # 12 tests
+│   │       ├── GameMetricsControllerTest.java   # 11 tests
+│   │       └── model/GameMetricTest.java        # 5 tests
+│   ├── pom.xml                 # Maven configuration
+│   ├── README.md               # Backend documentation
+│   ├── BUILD.md                # Build & test instructions
+│   ├── run-tests.sh            # Test automation script
+│   └── start-server.sh         # Server startup script
+├── gaming-metrics-dashboard/   # ⚛️ React Frontend
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── config.json     # Backend endpoint configuration
+│   │   ├── components/
+│   │   │   ├── GameCard.jsx    # Individual game metric card
+│   │   │   ├── MetricsChart.jsx    # Reusable chart component
+│   │   │   └── Header.jsx      # App header with live indicator
+│   │   ├── pages/
+│   │   │   └── Dashboard.jsx   # Main dashboard page
+│   │   ├── data/
+│   │   │   └── sampleGames.json    # Sample/fallback data
+│   │   ├── test/
+│   │   │   ├── setup.js        # Test configuration
+│   │   │   ├── Header.test.jsx
+│   │   │   ├── GameCard.test.jsx
+│   │   │   ├── MetricsChart.test.jsx
+│   │   │   └── Dashboard.test.jsx
+│   │   ├── App.jsx             # Root component
+│   │   ├── main.jsx            # App entry point
+│   │   └── theme.js            # MUI theme configuration
+│   ├── src-tauri/
+│   │   ├── src/
+│   │   │   └── main.rs         # Tauri main process
+│   │   ├── icons/              # App icons
+│   │   ├── Cargo.toml          # Rust dependencies
+│   │   └── tauri.conf.json     # Tauri configuration
+│   ├── package.json
+│   ├── vite.config.js          # Vite configuration
+│   ├── vitest.config.js        # Vitest configuration
+│   ├── README.md
+│   ├── QUICKSTART.md           # 5-minute setup guide
+│   ├── INSTALLATION.md         # End-user installation guide
+│   └── CONTRIBUTING.md         # Developer contribution guide
+├── JavaFeatures.md             # Backend feature specification
+├── BACKEND_IMPLEMENTATION.md   # Backend implementation summary
+├── README.md                   # This file
+└── LICENSE                     # MIT License
+```
 │       ├── release.yml         # Desktop app builds
 │       └── pages.yml           # GitHub Pages deployment
 ├── src/
@@ -90,26 +171,56 @@ gaming-metrics-dashboard/
 
 ### Prerequisites
 
-- **Node.js** 18+ and npm
+- **Node.js** 18+ and npm (for frontend)
+- **Java 17+** and **Maven** (for backend)
 - **Rust** (for Tauri desktop builds) - [Install Rust](https://www.rust-lang.org/tools/install)
-- **Java Backend** (optional) - See [Java Backend Setup](#-java-backend-integration) below
 
-### Web Application
+### Backend Setup (Java Spring Boot)
 
-1. **Clone the repository**:
+1. **Navigate to backend directory**:
 ```bash
-git clone https://github.com/reyisjones/GamingMetrics.git
-cd GamingMetrics/gaming-metrics-dashboard
+cd backend
 ```
 
-2. **Navigate to the project directory**:
+2. **Build and run tests**:
+```bash
+mvn clean test
+```
+
+3. **Start the backend server**:
+```bash
+mvn spring-boot:run
+```
+
+The backend will start on `http://localhost:8080`
+
+**API Endpoints:**
+- `GET http://localhost:8080/api/metrics` - Get all game metrics
+- `GET http://localhost:8080/api/metrics/analyze` - Get analysis summary
+- `GET http://localhost:8080/api/metrics/live` - Stream live updates (SSE)
+- `GET http://localhost:8080/api/metrics/test` - Health check
+
+**Documentation:** See [backend/README.md](backend/README.md) and [backend/BUILD.md](backend/BUILD.md)
+
+### Frontend Setup (React Web App)
+
+1. **Navigate to frontend directory**:
 ```bash
 cd gaming-metrics-dashboard
 ```
 
-3. **Install dependencies**:
+2. **Install dependencies**:
 ```bash
 npm install
+```
+
+3. **Configure backend endpoint** (optional):
+
+Edit `src/api/config.json`:
+```json
+{
+  "apis": "http://localhost:8080/api/metrics"
+}
 ```
 
 4. **Start the development server**:
@@ -319,73 +430,85 @@ Auto-deploys web app on push to `main`:
 
 ## 🔌 Java Backend Integration
 
-### Spring Boot REST API (Recommended)
+### Spring Boot REST API (Included)
 
-Create a Spring Boot application to serve gaming metrics:
+This repository includes a complete **Spring Boot 3.2.0** backend implementation with advanced features:
 
-#### 1. Add Dependencies (Maven)
+#### Backend Features
 
-```xml
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-json</artifactId>
-    </dependency>
-</dependencies>
+✅ **REST API Endpoints**
+- `GET /api/metrics` - Returns all game metrics with calculated scores
+- `GET /api/metrics/analyze` - Returns analysis summary with averages
+- `GET /api/metrics/live` - Streams real-time updates via SSE (every 3s)
+- `GET /api/metrics/test` - Health check endpoint
+
+✅ **Performance Calculations**
+- **Performance Score**: `(fps × 0.6) - (cpu × 0.15) - (gpu × 0.15) - (latency × 0.1)`
+- **Stability Index**: `100 - |cpu - gpu| × 0.6`
+- Normalized to 0-100 range
+
+✅ **Analytics Service**
+- Session variance analysis (FPS, CPU, GPU, latency)
+- Stability detection and recommendations
+- Anomaly detection (high temp, low FPS, high latency)
+
+✅ **Real-Time Features**
+- Server-Sent Events (SSE) streaming
+- Live metrics updates every 3 seconds
+- Automatic client reconnection
+
+✅ **Scheduled Monitoring**
+- Metrics aggregation every 10 seconds
+- Health check heartbeat every 30 seconds
+- Console logging of summaries
+
+✅ **Comprehensive Testing**
+- 37+ unit and integration tests
+- JUnit 5 with MockMvc
+- Test coverage for all services and controllers
+
+#### Backend Quick Start
+
+```bash
+# Navigate to backend
+cd backend
+
+# Run tests
+mvn clean test
+
+# Start server (runs on port 8080)
+mvn spring-boot:run
+
+# Or using the startup script
+./start-server.sh
 ```
 
-#### 2. Create Data Model
+#### Backend Documentation
 
-```java
-package com.gaming.metrics.model;
+- **[backend/README.md](backend/README.md)** - Complete API documentation, setup guide, and examples
+- **[backend/BUILD.md](backend/BUILD.md)** - Build and test instructions
+- **[BACKEND_IMPLEMENTATION.md](BACKEND_IMPLEMENTATION.md)** - Implementation summary
 
-public class GameMetrics {
-    private Long id;
-    private String name;
-    private Integer avgFps;
-    private Integer cpuUsage;
-    private Integer gpuUsage;
-    private Integer latencyMs;
-    private Integer temperatureC;
-    
-    // Constructors, getters, and setters
-    public GameMetrics() {}
-    
-    public GameMetrics(Long id, String name, Integer avgFps, 
-                      Integer cpuUsage, Integer gpuUsage, 
-                      Integer latencyMs, Integer temperatureC) {
-        this.id = id;
-        this.name = name;
-        this.avgFps = avgFps;
-        this.cpuUsage = cpuUsage;
-        this.gpuUsage = gpuUsage;
-        this.latencyMs = latencyMs;
-        this.temperatureC = temperatureC;
-    }
-    
-    // Getters and setters...
-}
+#### Sample Backend Response
+
+```json
+[
+  {
+    "name": "Cyber Drift X",
+    "avgFps": 144,
+    "cpuUsage": 62,
+    "gpuUsage": 75,
+    "latencyMs": 21,
+    "temperatureC": 68,
+    "performanceScore": 72.45,
+    "stabilityIndex": 92.2
+  }
+]
 ```
 
-#### 3. Create Response Wrapper
+#### Build Your Own Backend
 
-```java
-package com.gaming.metrics.model;
-
-import java.util.List;
-
-public class MetricsResponse {
-    private List<GameMetrics> games;
-    
-    public MetricsResponse() {}
-    
-    public MetricsResponse(List<GameMetrics> games) {
-        this.games = games;
-    }
+If you want to create a custom backend, see the example implementation below or use the included backend as reference.
     
     public List<GameMetrics> getGames() {
         return games;
@@ -708,10 +831,43 @@ Modify `src/data/sampleGames.json` to add more games or change metrics.
 
 ## 📚 Documentation
 
+### Frontend Documentation
+- **[gaming-metrics-dashboard/README.md](./gaming-metrics-dashboard/README.md)** - Frontend documentation
 - **[QUICKSTART.md](./gaming-metrics-dashboard/QUICKSTART.md)** - Get started in 5 minutes
 - **[INSTALLATION.md](./gaming-metrics-dashboard/INSTALLATION.md)** - End-user installation guide
 - **[CONTRIBUTING.md](./gaming-metrics-dashboard/CONTRIBUTING.md)** - How to contribute
 - **[CHANGELOG.md](./gaming-metrics-dashboard/CHANGELOG.md)** - Version history
+
+### Backend Documentation
+- **[backend/README.md](./backend/README.md)** - Complete backend API documentation
+- **[backend/BUILD.md](./backend/BUILD.md)** - Build and test instructions
+- **[BACKEND_IMPLEMENTATION.md](./BACKEND_IMPLEMENTATION.md)** - Implementation summary
+- **[JavaFeatures.md](./JavaFeatures.md)** - Backend feature specification
+
+## 📊 Project Statistics
+
+### Frontend (React + Tauri)
+- **Files**: 38 source files
+- **Lines of Code**: 10,048+
+- **Components**: 3 main components (Header, GameCard, MetricsChart)
+- **Pages**: 1 dashboard page
+- **Tests**: 25 unit tests (all passing)
+- **Test Coverage**: Comprehensive coverage for all components
+
+### Backend (Java Spring Boot)
+- **Files**: 18 source files
+- **Lines of Code**: 2,255+
+- **REST Endpoints**: 4 API endpoints
+- **Services**: 3 service classes
+- **Tests**: 37+ unit and integration tests (all passing)
+- **Test Coverage**: Full coverage for services and controllers
+
+### Total Project
+- **Total Files**: 56+ files
+- **Total Lines of Code**: 12,303+
+- **Total Tests**: 62+ tests (all passing)
+- **Languages**: JavaScript/JSX, Java, Rust, CSS
+- **Frameworks**: React 18, Spring Boot 3.2.0, Tauri 1.5
 
 ## 🤝 Contributing
 
